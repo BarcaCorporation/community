@@ -309,10 +309,21 @@ module.exports = {
         },
         {
           text: 'Desenvolver',
-          link: '/tutorials/programm/cplusplus/tcp.html',
+          link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html',
           children: [ 
-            {text: 'TCP Client/Server', link: '/tutorials/programm/cplusplus/tcp.html#client'},
-            {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/tcp.html#server'}
+            {text: 'TCP Client/Server', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html#tcp-client'},
+            {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html#tcp-server'}
+          ],
+        },
+      ],
+      '/tutorials/programm/cplusplus/protocols/tcp/tcp.html': [
+        {
+          text: 'Ambiente',
+          link: '/tutorials/programm/cplusplus/prerequisites.html',
+          children: [ 
+            {text: 'Configurar no Linux', link: '/tutorials/programm/cplusplus/installing.html'},
+            {text: 'Configurar no MacOS', link: '/tutorials/programm/cplusplus/installing.html'},
+            {text: 'Configurar no Windows', link: '/tutorials/programm/cplusplus/installing.html'},
           ],
         },
       ],
