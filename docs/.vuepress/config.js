@@ -299,6 +299,23 @@ module.exports = {
           ],
         },
       ],
+      '/tutorials/programm/cplusplus/intro.html': [
+        {
+          text: 'Requisitos',
+          link: '/tutorials/programm/cplusplus/prerequisites.html',
+          children: [ 
+            {text: 'Instalando GCC/G++', link: '/tutorials/programm/cplusplus/installing.html'},
+          ],
+        },
+        {
+          text: 'Desenvolver',
+          link: '/tutorials/programm/cplusplus/tcp.html',
+          children: [ 
+            {text: 'TCP Client/Server', link: '/tutorials/programm/cplusplus/tcp.html#client'},
+            {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/tcp.html#server'}
+          ],
+        },
+      ],
 
       
     },
