@@ -22,7 +22,7 @@ head:
 
 <br/>
 
-**C** é uma linguagem de programação de computador que foi criado  na década de 1970. Os recursos do C refletem claramente os recursos das CPUs visadas. Ele encontrou uso duradouro em sistemas operacionais, drivers de dispositivos, pilhas de protocolos, embora cada vez menos para software de aplicativos, e é comum em arquiteturas de computadores que vão desde os maiores supercomputadores até os menores microcontroladores e sistemas embarcados.
+**C** é uma linguagem de programação de computador que foi criado  na década de 1970. Os recursos do C refletem claramente os recursos das CPUs visadas. A linguagem encontrou uso duradouro em sistemas operacionais, drivers de dispositivos, pilhas de protocolos, embora cada vez menos para software de aplicativos, e é comum em arquiteturas de computadores que vão desde os maiores supercomputadores até os menores microcontroladores e sistemas embarcados.
 
 Um sucessor da linguagem de programação **B**, C foi originalmente desenvolvido por *Dennis Ritchie* entre 1972-1973 para contruir utilitários rodando em Unix.
 
