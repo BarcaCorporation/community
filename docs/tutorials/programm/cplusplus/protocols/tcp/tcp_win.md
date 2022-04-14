@@ -313,6 +313,25 @@ int __cdecl main(int argc, char **argv) {
 :::
 
 <br/>
+<br/>
+
+Crie dois arquivos em seu computador com os nomes de **server.cpp** e **client.cpp** e adicione determinado código-fonte aos arquivos e salve. 
+
+Para ser compilado, após criar os arquivos, use os seguintes comando para compilar:
+
+<br/>
+
+#### Compilar Server
+
+```bash
+g++ -o tcp_server.exe server.cpp
+```
+
+#### Compilar Client
+
+```bash
+g++ -o tcp_client.exe client.cpp
+```
 
 
 
