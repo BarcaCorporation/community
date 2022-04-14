@@ -305,8 +305,8 @@ module.exports = {
           text: 'Desenvolver',
           link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html',
           children: [ 
-            {text: 'TCP Client/Server', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html#tcp-client'},
-            {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html#tcp-server'}
+            {text: 'TCP Client/Server', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html'},
+            {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/protocols/udp/udp.html'}
           ],
         },
       ],
@@ -318,6 +318,23 @@ module.exports = {
             {text: 'Configurar no Linux', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp_unix.html'},
             {text: 'Configurar no MacOS', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp_darwin.html'},
             {text: 'Configurar no Windows', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp_win.html'},
+          ],
+        },
+      ],
+      '/tutorials/programm/cplusplus/protocols/tcp/tcp_win.html': [
+        {
+          text: 'Ambiente',
+          link: '/tutorials/programm/cplusplus/prerequisites.html',
+          children: [ 
+            {text: 'Configurar no Linux', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp_unix.html'},
+            {text: 'Configurar no MacOS', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp_darwin.html'},
+          ],
+        },
+        {
+          text: 'Desenvolver',
+          link: '/tutorials/programm/cplusplus/prerequisites.html',
+          children: [ 
+            {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/protocols/udp/udp.html'}
           ],
         },
       ],
