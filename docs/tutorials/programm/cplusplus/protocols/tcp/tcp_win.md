@@ -44,6 +44,145 @@ Siga as simples etapas para construir um servidor **TCP** no Windows
 6. Receber e enviar dados.
 7. Desconectar.
 
+
+::: details TCP Server Código-Fonte 
+```c++
+#undef UNICODE
+
+#define WIN32_LEAN_AND_MEAN
+
+#include <windows.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <stdlib.h>
+#include <stdio.h>
+// necessário associar com Ws2_32.lib
+#pragma comment (lib, "Ws2_32.lib")
+// #pragma comment (lib, "Mswsock.lib")
+
+#define DEFAULT_BUFLEN 512
+#define DEFAULT_PORT "27015"
+
+int __cdecl main(void) {
+    WSADATA wsaData;
+    int iResult;
+
+    SOCKET ListenSocket = INVALID_SOCKET;
+    SOCKET ClientSocket = INVALID_SOCKET;
+
+    struct addrinfo *result = NULL;
+    struct addrinfo hints;
+
+    int iSendResult;
+    char recvbuf[DEFAULT_BUFLEN];
+    int recvbuflen = DEFAULT_BUFLEN;
+    
+    // iniciar Winsock
+    iResult = WSAStartup(MAKEWORD(2,2), &wsaData);
+    if (iResult != 0) {
+      printf("WSAStartup failed\nError: %d\n", iResult);
+      return 1;
+    }
+
+    ZeroMemory(&hints, sizeof(hints));
+    hints.ai_family = AF_INET;
+    hints.ai_socktype = SOCK_STREAM;
+    hints.ai_protocol = IPPROTO_TCP;
+    hints.ai_flags = AI_PASSIVE;
+
+    // tratar endereço e a porta do servidor
+    iResult = getaddrinfo(NULL, DEFAULT_PORT, &hints, &result);
+    if ( iResult != 0 ) {
+      printf("getaddrinfo failed\nError: %d\n", iResult);
+      WSACleanup();
+      return 1;
+    }
+
+    // crie um SOCKET para se conectar ao servidor
+    ListenSocket = socket(result->ai_family, result->ai_socktype, result->ai_protocol);
+    if (ListenSocket == INVALID_SOCKET) {
+      printf("socket failed\nerror: %ld\n", WSAGetLastError());
+      freeaddrinfo(result);
+      WSACleanup();
+      return 1;
+    }
+
+    // configurar o soquete TCP
+    iResult = bind( ListenSocket, result->ai_addr, (int)result->ai_addrlen);
+    if (iResult == SOCKET_ERROR) {
+      printf("bind failed\nError: %d\n", WSAGetLastError());
+      freeaddrinfo(result);
+      closesocket(ListenSocket);
+      WSACleanup();
+      return 1;
+    }
+
+    freeaddrinfo(result);
+
+    iResult = listen(ListenSocket, SOMAXCONN);
+    if (iResult == SOCKET_ERROR) {
+      printf("listen failed\nerror: %d\n", WSAGetLastError());
+      closesocket(ListenSocket);
+      WSACleanup();
+      return 1;
+    }
+
+    // aceitar conexão com um cliente
+    ClientSocket = accept(ListenSocket, NULL, NULL);
+    if (ClientSocket == INVALID_SOCKET) {
+      printf("accept failed\nError: %d\n", WSAGetLastError());
+      closesocket(ListenSocket);
+      WSACleanup();
+      return 1;
+    }
+    // sair
+    closesocket(ListenSocket);
+
+    // esperar resposta
+    do {
+
+      iResult = recv(ClientSocket, recvbuf, recvbuflen, 0);
+      if (iResult > 0) {
+        printf("Bytes recebido: %d\n", iResult);
+        // reenviar buffer ao cliente
+        iSendResult = send( ClientSocket, recvbuf, iResult, 0 );
+        if (iSendResult == SOCKET_ERROR) {
+          printf("send failed\nError: %d\n", WSAGetLastError());
+          closesocket(ClientSocket);
+          WSACleanup();
+          return 1;
+        }
+        printf("Bytes enviado: %d\n", iSendResult);
+      }
+      else if (iResult == 0)
+        printf("Desconectando...\n");
+      else  {
+        printf("recv failed\nError: %d\n", WSAGetLastError());
+        closesocket(ClientSocket);
+        WSACleanup();
+        return 1;
+      }
+
+    } while (iResult > 0);
+
+    // desligue a conexão desde que terminamos
+    iResult = shutdown(ClientSocket, SD_SEND);
+    if (iResult == SOCKET_ERROR) {
+      printf("shutdown failed\nError: %d\n", WSAGetLastError());
+      closesocket(ClientSocket);
+      WSACleanup();
+      return 1;
+    }
+
+    // limpar e sair
+    closesocket(ClientSocket);
+    WSACleanup();
+
+    return 0;
+}
+```
+:::
+
 ## Winsock Client
 
 1. Inicialize o Winsock.
