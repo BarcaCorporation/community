@@ -180,12 +180,6 @@ module.exports = {
           },
         ],
       },
-      // VERSIONS
-      {
-        text: 'v0.1.0',
-        children: ['v0.1.0', 'v0.1.0-beta'],
-        link: '/barca/releases.html'
-      },
     ],
     backToHome: 'Voltar ao inicio',
     locales: {
@@ -321,14 +315,12 @@ module.exports = {
           text: 'Ambiente',
           link: '/tutorials/programm/cplusplus/prerequisites.html',
           children: [ 
-            {text: 'Configurar no Linux', link: '/tutorials/programm/cplusplus/installing.html'},
-            {text: 'Configurar no MacOS', link: '/tutorials/programm/cplusplus/installing.html'},
-            {text: 'Configurar no Windows', link: '/tutorials/programm/cplusplus/installing.html'},
+            {text: 'Configurar no Linux', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp_unix.html'},
+            {text: 'Configurar no MacOS', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp_darwin.html'},
+            {text: 'Configurar no Windows', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp_win.html'},
           ],
         },
       ],
-
-      
     },
     nav: [
       { text: "Home", link: "/" }
