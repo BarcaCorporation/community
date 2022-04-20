@@ -306,7 +306,8 @@ module.exports = {
           link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html',
           children: [ 
             {text: 'TCP Client/Server', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html'},
-            {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/protocols/udp/udp.html'}
+            {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/protocols/udp/udp.html'},
+            {text: 'Criptografia', link: '/tutorials/programm/cplusplus/crypto/xor.html'},
           ],
         },
       ],
@@ -334,7 +335,8 @@ module.exports = {
           text: 'Desenvolver',
           link: '/tutorials/programm/cplusplus/prerequisites.html',
           children: [ 
-            {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/protocols/udp/udp.html'}
+            {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/protocols/udp/udp.html'},
+            {text: 'Criptografia', link: '/tutorials/programm/cplusplus/crypto/xor.html'},
           ],
         },
       ],
