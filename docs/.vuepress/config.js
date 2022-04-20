@@ -307,7 +307,7 @@ module.exports = {
           children: [ 
             {text: 'TCP Client/Server', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html'},
             {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/protocols/udp/udp.html'},
-            {text: 'Criptografia', link: '/tutorials/programm/cplusplus/crypto/xor.html'},
+            {text: 'Criptografia', link: '/tutorials/programm/cplusplus/crypto/intro.html'},
           ],
         },
       ],
@@ -336,7 +336,25 @@ module.exports = {
           link: '/tutorials/programm/cplusplus/prerequisites.html',
           children: [ 
             {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/protocols/udp/udp.html'},
-            {text: 'Criptografia', link: '/tutorials/programm/cplusplus/crypto/xor.html'},
+            {text: 'Criptografia', link: '/tutorials/programm/cplusplus/crypto/intro.html'},
+          ],
+        },
+        {
+          text: 'Desenvolver',
+          link: '/tutorials/programm/cplusplus/crypto/intro.html',
+          children: [ 
+            {text: 'XOR Cypher', link: '/tutorials/programm/cplusplus/crypto/xor.html'},
+            {text: 'Vigenere Cypher', link: '/tutorials/programm/cplusplus/crypto/vigenere.html'},
+          ],
+        },
+      ],
+      '/tutorials/programm/cplusplus/crypto/intro.html': [
+        {
+          text: 'Algoritmos',
+          link: '/tutorials/programm/cplusplus/crypto/intro.html',
+          children: [ 
+            {text: 'XOR Cypher', link: '/tutorials/programm/cplusplus/crypto/xor.html'},
+            {text: 'Vigenere Cypher', link: '/tutorials/programm/cplusplus/crypto/vigenere.html'},
           ],
         },
       ],
