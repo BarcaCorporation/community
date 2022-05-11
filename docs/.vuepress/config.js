@@ -305,9 +305,21 @@ module.exports = {
           text: 'Desenvolver',
           link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html',
           children: [ 
+            {text: 'Files', link: '/tutorials/programm/cplusplus/file/intro.html'},
             {text: 'TCP Client/Server', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html'},
             {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/protocols/udp/udp.html'},
             {text: 'Criptografia', link: '/tutorials/programm/cplusplus/crypto/intro.html'},
+          ],
+        },
+      ],
+      '/tutorials/programm/cplusplus/file/intro.html': [
+        {
+          text: 'Arquivos',
+          link: '/tutorials/programm/cplusplus/file/intro.html',
+          children: [ 
+            {text: 'JSON', link: '/tutorials/programm/cplusplus/file/json.html'},
+            {text: 'CSV', link: '/tutorials/programm/cplusplus/file/csv.html'},
+            {text: 'XML', link: '/tutorials/programm/cplusplus/file/xml.html'},
           ],
         },
       ],
