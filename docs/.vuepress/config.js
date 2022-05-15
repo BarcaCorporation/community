@@ -314,7 +314,7 @@ module.exports = {
       ],
       '/tutorials/programm/cplusplus/file/intro.html': [
         {
-          text: 'Arquivos',
+          text: 'Arquivos em C++',
           link: '/tutorials/programm/cplusplus/file/intro.html',
           children: [ 
             {text: 'JSON', link: '/tutorials/programm/cplusplus/file/json.html'},
