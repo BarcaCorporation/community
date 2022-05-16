@@ -1,3 +1,17 @@
+---
+lang: pt-BR
+title: Xampp
+description: XAMPP Web Server
+head:
+  - - meta
+    - name: foo
+      content: bar
+  - - link
+    - rel: canonical
+      href: foobar
+---
+
+
 # Barca Community
 
 ::: tip Working on this content

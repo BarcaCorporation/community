@@ -1,7 +1,7 @@
 ---
 lang: pt-BR
-title: Caddy
-description: Caddy Web Server
+title: Security
+description: CyberSecurity
 head:
   - - meta
     - name: foo
@@ -10,6 +10,7 @@ head:
     - rel: canonical
       href: foobar
 ---
+
 
 # Barca Community
 

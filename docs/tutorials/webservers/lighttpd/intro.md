@@ -1,3 +1,16 @@
+---
+lang: pt-BR
+title: Lighttpd
+description: Lighttpd Web Server
+head:
+  - - meta
+    - name: foo
+      content: bar
+  - - link
+    - rel: canonical
+      href: foobar
+---
+
 # Barca Community
 
 ::: tip Working on this content
