@@ -45,6 +45,12 @@ Ela foi projetado para ser compilado para fornecer acesso de baixo nível à mem
 
 Apesar de seus recursos de baixo nível, ela foi projetada para incentivar a programação entre plataformas. Um programa **C** compatível com padrões escrito com portabilidadeem mente pode ser compilado para uma ampla variedade de plataformas de computador e sistemas operacionais com poucas alterações em seu código-fonte.
 
+<br/>
+
+### Exemplo
+
+<br/>
+
 Abaixo nós teremos uma função básica nomeada de **soma()**, que recebe como parâmetros dois valores **valorA, valorB** do tipo **int** sendo chamada de dentro da função principal -> **main**, 
 
 <br/>
