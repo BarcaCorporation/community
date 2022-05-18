@@ -203,10 +203,10 @@ module.exports = {
           link: '/tutorials/webservers/intro-webservers-tutorial.html',
           children: [
             {text: 'Apache', link: '/tutorials/webservers/apache/installing.html'},
-            {text: 'Lighttpd', link: '/tutorials/webservers/lighttpd/generate.html#api-com-laravel-php'},
-            {text: 'NGINX', link: '/tutorials/webservers/nginx/generate.html#api-com-laravel-php'},
-            {text: 'XAMPP', link: '/tutorials/webservers/xampp/generate.html#api-com-go-lang'},
-            {text: 'Caddy', link: '/tutorials/webservers/caddy/generate.html#api-com-rocket-rust'},
+            {text: 'Lighttpd', link: '/tutorials/webservers/lighttpd/intro.html'},
+            {text: 'NGINX', link: '/tutorials/webservers/nginx/intro.html'},
+            {text: 'XAMPP', link: '/tutorials/webservers/xampp/intro.html'},
+            {text: 'Caddy', link: '/tutorials/webservers/caddy/intro.html'},
           ],
         },
         {
