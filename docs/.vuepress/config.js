@@ -216,9 +216,10 @@ module.exports = {
             {text: 'C/C++', link: '/tutorials/programm/cplusplus/intro.html'}, 
             {text: 'CSharp', link: '/tutorials/programm/csharp/intro.html'}, 
             {text: 'Go lang', link: '/tutorials/programm/go/intro.html'}, 
+            {text: 'Elixir', link: '/tutorials/programm/elixir/intro.html'}, 
             {text: 'Rust lang', link: '/tutorials/programm/rust/intro.html'},
             {text: 'Ruby', link: '/tutorials/programm/ruby/intro.html'}, 
-            {text: 'Javascript', link: '/tutorials/programm/js/intro.html'}, 
+            {text: 'Javascript', link: '/tutorials/programm/javascript/intro.html'}, 
             {text: 'JAVA', link: '/tutorials/programm/java/intro.html'}, 
             {text: 'Kotlin', link: '/tutorials/programm/kotlin/intro.html'}, 
             {text: 'Swift', link: '/tutorials/programm/swift/intro.html'}, 
@@ -263,7 +264,7 @@ module.exports = {
           ],
         },
       ],
-
+      // LINUX * LINUX * LINUX * LINUX * LINUX * LINUX * LINUX
       '/tutorials/os/unix/linux.html': [
         {
           text: 'Distribuições',
@@ -293,6 +294,7 @@ module.exports = {
           ],
         },
       ],
+      // C/C++ * C/C++ * C/C++ * C/C++ * C/C++ * C/C++ * C/C++
       '/tutorials/programm/cplusplus/intro.html': [
         {
           text: 'Requisitos',
@@ -367,6 +369,34 @@ module.exports = {
           children: [ 
             {text: 'XOR Cypher', link: '/tutorials/programm/cplusplus/crypto/xor.html'},
             {text: 'Vigenere Cypher', link: '/tutorials/programm/cplusplus/crypto/vigenere.html'},
+          ],
+        },
+      ],
+      // JAVASCRIPT * JAVASCRIPT * JAVASCRIPT * JAVASCRIPT * JAVASCRIPT * JAVASCRIPT * JAVASCRIPT
+      '/tutorials/programm/javascript/intro.html': [
+        {
+          text: 'Requisitos',
+          children: [ 
+            {text: 'Instalando Node.js', link: '/tutorials/programm/javascript/installing.html'},
+          ],
+        },
+        {
+          text: 'Desenvolver',
+          children: [ 
+            {text: 'Assíncrono/Síncrono', link: '/tutorials/programm/javascript/functions/intro.html'},
+            {text: 'Autenticação', link: '/tutorials/programm/javascript/auth/intro.html'},
+            {text: 'Data Types', link: '/tutorials/programm/javascript/structure/datatypes.html'},
+            {text: 'Files', link: '/tutorials/programm/javascript/file/intro.html'},
+            {text: 'HTTP Client/Server', link: '/tutorials/programm/javascript/protocols/http/http.html'},
+            {text: 'TCP Client/Server', link: '/tutorials/programm/javascript/protocols/tcp/tcp.html'},
+            {text: 'UDP Client/Server', link: '/tutorials/programm/javascript/protocols/udp/udp.html'},
+            {text: 'Node runtime JS', link: '/tutorials/programm/javascript/runtime/node.html'},
+            {text: 'Deno runtime JS', link: '/tutorials/programm/javascript/runtime/deno.html'},
+            {text: 'Telnet', link: '/tutorials/programm/javascript/protocols/telnet/telnet.html'},
+            {text: 'Criptografia', link: '/tutorials/programm/javascript/crypto/intro.html'},
+            {text: 'Consumir API', link: '/tutorials/programm/javascript/protocols/http/intro.html'},
+            {text: 'Criar Modulo', link: '/tutorials/programm/javascript/npm/intro.html'},
+            {text: 'Socket.IO', link: '/tutorials/programm/javascript/socket/intro.html'},
           ],
         },
       ],
