@@ -107,11 +107,11 @@ module.exports = {
             text: 'Ferramentas',
             children: [
               {text: 'Barca', link: '/engine/intro.html'},
-              {text: 'BWCloud', link: '/tools/cloud/bwc.html'},
-              {text: 'Mamute', link: '/tools/mamute/intro.html'},
-              {text: 'Rino', link: '/tools/rino/intro.html'},
-              {text: 'Ares', link: '/tools/ares/intro.html'},
-              {text: 'Harpia', link: '/tools/harpia/intro.html'},
+              {text: 'BWCloud', link: '/tutorials/bwc/intro.html'},
+              {text: 'Mamute', link: '/tutorials/bwc/tools/mamute.html'},
+              {text: 'Rino', link: '/tutorials/bwc/tools/rino.html'},
+              {text: 'Liarca', link: '/tutorials/bwc/services/liarca.html'},
+              {text: 'Harpia', link: '/tutorials/bwc/tools/harpia.html'},
             ]
           },
           {
@@ -215,11 +215,12 @@ module.exports = {
           children: [ 
             {text: 'C/C++', link: '/tutorials/programm/cplusplus/intro.html'}, 
             {text: 'CSharp', link: '/tutorials/programm/csharp/intro.html'}, 
-            {text: 'Go lang', link: '/tutorials/programm/go/intro.html'}, 
             {text: 'Elixir', link: '/tutorials/programm/elixir/intro.html'}, 
+            {text: 'Go lang', link: '/tutorials/programm/go/intro.html'}, 
             {text: 'Rust lang', link: '/tutorials/programm/rust/intro.html'},
             {text: 'Ruby', link: '/tutorials/programm/ruby/intro.html'}, 
-            {text: 'Javascript', link: '/tutorials/programm/javascript/intro.html'}, 
+            {text: 'JavaScript', link: '/tutorials/programm/javascript/intro.html'}, 
+            {text: 'TypeScript', link: '/tutorials/programm/TypeScript/intro.html'}, 
             {text: 'JAVA', link: '/tutorials/programm/java/intro.html'}, 
             {text: 'Kotlin', link: '/tutorials/programm/kotlin/intro.html'}, 
             {text: 'Swift', link: '/tutorials/programm/swift/intro.html'}, 
