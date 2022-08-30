@@ -1,4 +1,6 @@
 const version = require("./../../package.json").version;
+const { registerComponentsPlugin } = require('@vuepress/plugin-register-components');
+const { path } = require('@vuepress/utils');
 
 module.exports = {
   head: [
@@ -79,6 +81,19 @@ module.exports = {
     '@vuepress/back-to-top', 
     '@vuepress/medium-zoom', 
     '@vuepress/plugin-search',
+    [
+      '@vuepress/register-components',
+      // {
+      //   componentsDir: path.resolve(__dirname, './components'),
+      // },
+      registerComponentsPlugin({
+        components: {
+          // Card: path.resolve(__dirname, './components/Card.vue'),
+          componentsDir: path.resolve(__dirname, './components')
+          
+        },
+      }),
+    ],
     {
       getExtraFields: (page) => page.frontmatter.tags ?? [],
     },
@@ -213,6 +228,7 @@ module.exports = {
           text: 'Programação',
           link: '/tutorials/programm/intro-programm-tutorial.html',
           children: [ 
+            {text: 'Assembly', link: '/tutorials/programm/assembly/intro.html'}, 
             {text: 'C/C++', link: '/tutorials/programm/cplusplus/intro.html'}, 
             {text: 'CSharp', link: '/tutorials/programm/csharp/intro.html'}, 
             {text: 'Go lang', link: '/tutorials/programm/go/intro.html'}, 
@@ -311,6 +327,7 @@ module.exports = {
             {text: 'TCP Client/Server', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html'},
             {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/protocols/udp/udp.html'},
             {text: 'Criptografia', link: '/tutorials/programm/cplusplus/crypto/intro.html'},
+            {text: 'Objetos', link: '/tutorials/programm/cplusplus/object/intro.html'},
           ],
         },
       ],
@@ -322,6 +339,18 @@ module.exports = {
             {text: 'JSON', link: '/tutorials/programm/cplusplus/file/json.html'},
             {text: 'CSV', link: '/tutorials/programm/cplusplus/file/csv.html'},
             {text: 'XML', link: '/tutorials/programm/cplusplus/file/xml.html'},
+          ],
+        },
+      ],
+      '/tutorials/programm/cplusplus/object/intro.html': [
+        {
+          text: 'Arquivos em C++',
+          link: '/tutorials/programm/cplusplus/file/intro.html',
+          children: [ 
+            {text: 'Files', link: '/tutorials/programm/cplusplus/file/intro.html'},
+            {text: 'TCP Client/Server', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html'},
+            {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/protocols/udp/udp.html'},
+            {text: 'Criptografia', link: '/tutorials/programm/cplusplus/crypto/intro.html'},
           ],
         },
       ],
