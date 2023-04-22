@@ -323,11 +323,12 @@ module.exports = {
           text: 'Desenvolver',
           link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html',
           children: [ 
+            {text: 'Criptografia', link: '/tutorials/programm/cplusplus/crypto/intro.html'},
+            {text: 'Classes, objetos e interfaces', link: '/tutorials/programm/cplusplus/object/intro.html'},
+            {text: 'Data types', link: '/tutorials/programm/cplusplus/datatype/intro.html'},
             {text: 'Files', link: '/tutorials/programm/cplusplus/file/intro.html'},
             {text: 'TCP Client/Server', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html'},
             {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/protocols/udp/udp.html'},
-            {text: 'Criptografia', link: '/tutorials/programm/cplusplus/crypto/intro.html'},
-            {text: 'Objetos', link: '/tutorials/programm/cplusplus/object/intro.html'},
           ],
         },
       ],
@@ -344,9 +345,23 @@ module.exports = {
       ],
       '/tutorials/programm/cplusplus/object/intro.html': [
         {
-          text: 'Arquivos em C++',
-          link: '/tutorials/programm/cplusplus/file/intro.html',
+          text: 'Tudo com C/C++',
+          link: '/tutorials/programm/cplusplus/intro.html',
           children: [ 
+            {text: 'Data Type', link: '/tutorials/programm/cplusplus/datatype/intro.html'},
+            {text: 'Files', link: '/tutorials/programm/cplusplus/file/intro.html'},
+            {text: 'TCP Client/Server', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html'},
+            {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/protocols/udp/udp.html'},
+            {text: 'Criptografia', link: '/tutorials/programm/cplusplus/crypto/intro.html'},
+          ],
+        },
+      ],
+      '/tutorials/programm/cplusplus/datatype/intro.html': [
+        {
+          text: 'Tudo com C/C++',
+          link: '/tutorials/programm/cplusplus/intro.html',
+          children: [ 
+            {text: 'Classes, objetos e interfaces', link: '/tutorials/programm/cplusplus/object/intro.html'},
             {text: 'Files', link: '/tutorials/programm/cplusplus/file/intro.html'},
             {text: 'TCP Client/Server', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html'},
             {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/protocols/udp/udp.html'},
