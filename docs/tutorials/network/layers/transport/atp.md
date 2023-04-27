@@ -6,7 +6,7 @@ O **ATP** funciona em cima de uma arquitetura semelhante a uma arquitetura `clie
 
 <br>
 
-### Transações no ATP:
+### Transações no ATP
 
 
 1. O solicitante invoca a interface ATP. A interface então usa o driver ATP para estabelecer uma conexão dedicada com o driver ATP do respondente.
