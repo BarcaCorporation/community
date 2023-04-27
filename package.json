@@ -1,12 +1,18 @@
 {
-  "name": "project-barca-community",
-  "version": "1.0.0",
+  "name": "barca-community",
+  "version": "0.1.1",
   "description": "Repository to centralize content how scripts, tutorials and more.",
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "author": "@ahsouza Aníbal Souza <annibalhsouza@gmail.com>",
+  "authors": [
+    {
+      "name": "Aníbal Barca",
+      "email": "anibalbs@barca.com",
+      "github": "ahsouza"
+    }
+  ],
   "license": "ISC",
   "devDependencies": {
     "@vue/component-compiler-utils": "~3.3.0",
