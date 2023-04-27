@@ -1,12 +1,14 @@
 ## Camada Física modelo OSI
 
-A camada física é a camada mais inferior no modelo **OSI** (Open System Interconnection), que é uma representação física e elétrica do sistema. Ela consiste em vários componentes de rede, como plugues de alimentação, conectores, receptores, tipos de cabo, etc. A camada física envia bits de dados de um(s) dispositivo(s) (como um computador) para outro(s) dispositivo(s). A Camada Física define os tipos de codificação (é assim que os 0's e 1's são codificados em um sinal). A camada física é responsável pela comunicação dos fluxos de dados brutos não estruturados em um meio físico.
+A camada física é a camada mais inferior no modelo [**OSI**](../../fundamental/osi-model.md) (Open System Interconnection), que é uma representação física e elétrica do sistema. Ela consiste em vários componentes de rede, como plugues de alimentação, conectores, receptores, tipos de cabo, etc. A camada física envia bits de dados de um(s) dispositivo(s) (como um computador) para outro(s) dispositivo(s). A Camada Física define os tipos de codificação (é assim que os 0's e 1's são codificados em um sinal). A camada física é responsável pela comunicação dos fluxos de dados brutos não estruturados em um meio físico.
 
 <br>
 
 ### Funções desempenhadas pela camada física
 
-Estas são algumas funções importantes e básicas que são executadas pela camada física do modelo OSI:
+Estas são algumas funções importantes e básicas que são executadas pela camada física do modelo [OSI](../../fundamental/osi-model.md):
+
+<br>
 
 1. A Camada Física mantém a taxa de dados (quantos bits um remetente pode enviar por segundo).
 
@@ -37,6 +39,8 @@ Estas são algumas funções importantes e básicas que são executadas pela cam
 ### Topologias Físicas:
 
 Topologia Física ou Topologia de Rede é a Representação Geográfica dos Dispositivos de Ligação. A seguir estão os quatro tipos de topologia física:
+
+<br>
 
 1. Topologia de malha: em uma topologia de malha, todo e qualquer dispositivo deve ter uma conexão ponto a ponto dedicada com todos os outros dispositivos da rede. Aqui há mais segurança de dados porque há uma conexão ponto a ponto dedicada entre dois dispositivos. A topologia de malha é difícil de instalar porque é mais complexa.
 
