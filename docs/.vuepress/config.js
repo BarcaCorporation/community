@@ -93,6 +93,7 @@ module.exports = {
           
         },
       }),
+      
     ],
     {
       getExtraFields: (page) => page.frontmatter.tags ?? [],
@@ -111,8 +112,13 @@ module.exports = {
     ],
   ],
   themeConfig: {
-    docsRepo: 'https://github.com/project-barca/community',
+    repoLabel: 'Contribute!',
+    editLinks: true,
+    editLinkText: 'Help us improve this page!',
+    docsDir: 'docs',
+    docsRepo: 'https://github.com/BarcaCorporation/community',
     docsBranch: 'main',
+    search: true,
     navbar: [
       // DOCS
       {
@@ -122,9 +128,9 @@ module.exports = {
             text: 'Ferramentas',
             children: [
               {text: 'Barca', link: '/engine/intro.html'},
-              {text: 'BWCloud', link: '/tools/cloud/bwc.html'},
-              {text: 'Mamute', link: '/tools/mamute/intro.html'},
-              {text: 'Rino', link: '/tools/rino/intro.html'},
+              {text: 'Barca Cloud', link: '/tools/cloud/bwc.html'},
+              {text: 'MamuteDB', link: '/tools/mamute/intro.html'},
+              {text: 'BSCAN', link: '/tools/bscan/intro.html'},
               {text: 'Ares', link: '/tools/ares/intro.html'},
               {text: 'Harpia', link: '/tools/harpia/intro.html'},
             ]
@@ -135,6 +141,8 @@ module.exports = {
               {text: 'Barca Cine', link: '/platforms/bcine/docs/intro.html'},
               {text: 'Barca Store', link: '/platforms/bstore/docs/intro.html'},
               {text: 'Barca Academic', link: '/platforms/bacademic/docs/intro.html'},
+              {text: 'Barca Medici', link: '/platforms/bacmedici/docs/intro.html'},
+              {text: 'Barca Sports', link: '/platforms/bacsports/docs/intro.html'},
             ]
           },
           {
@@ -199,17 +207,19 @@ module.exports = {
     backToHome: 'Voltar ao inicio',
     locales: {
       '/': {
+        label: 'Português-Brasileiro',
         selectLanguageName: 'Português-Brasileiro',
-      },
-      '/en/': {
-        selectLanguageName: 'English',
-      },
-      '/zh/': {
-        selectLanguageName: '简体中文',
+        selectText: 'Linguagens',
+        serviceWorker: {
+          updatePopup: {
+            message: 'New content is available.',
+            buttonText: 'Refresh'
+          }
+        },
       },
     },
-    logo: 'https://raw.githubusercontent.com/project-barca/community/main/static/ivd/barca-logo.jpeg',
-    logoDark: 'https://raw.githubusercontent.com/project-barca/community/main/static/ivd/barca-logo.jpeg',
+    logo: 'https://raw.githubusercontent.com/BarcaCorporation/community/main/static/foundation/logos/2023/barca-logo-color-secondary-gold.png',
+    logoDark: 'https://raw.githubusercontent.com/BarcaCorporation/community/main/static/foundation/logos/2023/barca-logo-color-secondary-green.png',
     lastUpdated: false,
     sidebar: {
       '/tutorials/intro-tutorials.html': [
@@ -271,6 +281,14 @@ module.exports = {
           ],
         },
         {
+          text: 'Redes de Computadores',
+          link: '/tutorials/network/intro-network-tutorial.html',
+          children: [ 
+            {text: 'Fundamentos', link: '/tutorials/network/fundamental/basic-computer-network.html'},
+            {text: 'Camadas de Redes', link: '/tutorials/network/layers/intro.html'},
+          ],
+        },
+        {
           text: 'Sistemas Operacionais',
           link: '/tutorials/os/intro-os-tutorial.html',
           children: [ 
@@ -310,6 +328,22 @@ module.exports = {
           ],
         },
       ],
+      // FUNDAMENTALS NETWORK * FUNDAMENTALS NETWORK * FUNDAMENTALS NETWORK * 
+      '/tutorials/network/fundamental/basic-computer-network.html': [
+        {
+          text: 'Modelo OSI',
+          link: '/tutorials/network/layers/osi-model.html',
+          children: [ 
+            {text: 'Aplicação', link: '/tutorials/network/layers/application/intro.html'}, 
+            {text: 'Apresentação', link: '/tutorials/network/layers/data_link/intro.html'}, 
+            {text: 'Sessão', link: '/tutorials/network/layers/session/intro.html'}, 
+            {text: 'Transporte', link: '/tutorials/network/layers/transport/intro.html'},
+            {text: 'Rede', link: '/tutorials/network/layers/network/intro.html'},
+            {text: 'Enlace de Dados', link: '/tutorials/network/layers/data_link/intro.html'},
+            {text: 'Física', link: '/tutorials/network/layers/physical/intro.html'}, 
+          ],
+        },
+      ],
       // C/C++ * C/C++ * C/C++ * C/C++ * C/C++ * C/C++ * C/C++
       '/tutorials/programm/cplusplus/intro.html': [
         {
@@ -324,7 +358,7 @@ module.exports = {
           link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html',
           children: [ 
             {text: 'Criptografia', link: '/tutorials/programm/cplusplus/crypto/intro.html'},
-            {text: 'Classes, objetos e interfaces', link: '/tutorials/programm/cplusplus/object/intro.html'},
+            {text: 'Orientação a Objetos', link: '/tutorials/programm/cplusplus/object/intro.html'},
             {text: 'Data types', link: '/tutorials/programm/cplusplus/datatype/intro.html'},
             {text: 'Files', link: '/tutorials/programm/cplusplus/file/intro.html'},
             {text: 'TCP Client/Server', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html'},
@@ -348,11 +382,17 @@ module.exports = {
           text: 'Tudo com C/C++',
           link: '/tutorials/programm/cplusplus/intro.html',
           children: [ 
-            {text: 'Data Type', link: '/tutorials/programm/cplusplus/datatype/intro.html'},
-            {text: 'Files', link: '/tutorials/programm/cplusplus/file/intro.html'},
-            {text: 'TCP Client/Server', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html'},
-            {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/protocols/udp/udp.html'},
-            {text: 'Criptografia', link: '/tutorials/programm/cplusplus/crypto/intro.html'},
+            // {text: 'Data Type', link: '/tutorials/programm/cplusplus/datatype/intro.html'},
+            // {text: 'Files', link: '/tutorials/programm/cplusplus/file/intro.html'},
+            // {text: 'TCP Client/Server', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html'},
+            // {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/protocols/udp/udp.html'},
+            // {text: 'Criptografia', link: '/tutorials/programm/cplusplus/crypto/intro.html'},
+            {text: 'Classes, Objetos & Interfaces', link: '/tutorials/programm/cplusplus/object/intro.html'},
+            {text: 'Herança', link: '/tutorials/programm/cplusplus/crypto/intro.html'},
+            {text: 'Polymorphism', link: '/tutorials/programm/cplusplus/crypto/intro.html'},
+            {text: 'Poliformismo', link: '/tutorials/programm/cplusplus/crypto/intro.html'},
+            {text: 'Abstração', link: '/tutorials/programm/cplusplus/crypto/intro.html'},
+            {text: 'Encapsulamento', link: '/tutorials/programm/cplusplus/crypto/intro.html'},
           ],
         },
       ],
@@ -361,7 +401,7 @@ module.exports = {
           text: 'Tudo com C/C++',
           link: '/tutorials/programm/cplusplus/intro.html',
           children: [ 
-            {text: 'Classes, objetos e interfaces', link: '/tutorials/programm/cplusplus/object/intro.html'},
+            {text: 'Classes, Objetos e Interfaces', link: '/tutorials/programm/cplusplus/object/intro.html'},
             {text: 'Files', link: '/tutorials/programm/cplusplus/file/intro.html'},
             {text: 'TCP Client/Server', link: '/tutorials/programm/cplusplus/protocols/tcp/tcp.html'},
             {text: 'UDP Client/Server', link: '/tutorials/programm/cplusplus/protocols/udp/udp.html'},
@@ -564,6 +604,41 @@ module.exports = {
           ],
         },
       ],
+
+      // NETWORK * NETWORK * NETWORK * NETWORK * NETWORK * NETWORK * NETWORK
+      '/tutorials/network/intro-network-tutorial.html': [
+        {
+          text: 'Distribuições',
+          link: '/tutorials/os/unix/distributions/intro-linux.html',
+          children: [ 
+            {text: 'Ubuntu', link: '/tutorials/database/apache/intro.html'}, 
+            {text: 'Fedora', link: '/tutorials/database/couchbase/intro.html'}, 
+            {text: 'Mint', link: '/tutorials/database/exasol/intro.html'}, 
+            {text: 'OpenSuse', link: '/tutorials/database/ingres/intro.html'},
+            {text: 'Slackware', link: '/tutorials/database/firebird/intro.html'},
+            {text: 'Debian', link: '/tutorials/database/linter/intro.html'},
+            {text: 'GuaranaOS', link: '/tutorials/database/vertica/intro.html'}, 
+            {text: 'Red Hat', link: '/tutorials/database/mimersql/intro.html'},
+            {text: 'CentOS', link: '/tutorials/database/mss/intro.html'},
+            {text: 'FreeBSD', link: '/tutorials/database/mss/intro.html'},
+            {text: 'Arch', link: '/tutorials/database/mongodb/intro.html'}, 
+            {text: 'Kubuntu', link: '/tutorials/database/mariadb/intro.html'},
+            {text: 'Lubuntu', link: '/tutorials/database/mysql/intro.html'},
+            {text: 'Kali', link: '/tutorials/database/netezza/intro.html'}, 
+            {text: 'Parrot', link: '/tutorials/database/oracle/intro.html'},
+            {text: 'PopOS', link: '/tutorials/database/oracle/intro.html'},
+            {text: 'Blackbox', link: '/tutorials/database/psql/intro.html'},
+            {text: 'PrestoDB', link: '/tutorials/database/pdb/intro.html'},
+            {text: 'ZorinOS', link: '/tutorials/database/redis/intro.html'},
+            {text: 'ElementaryOS', link: '/tutorials/database/sap/intro.html'},
+            {text: 'Teradata', link: '/tutorials/database/teradata/intro.html'},
+          ],
+        },
+      ],
+
+
+
+
     },
     nav: [
       { text: "Home", link: "/" }
