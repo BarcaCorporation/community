@@ -1,5 +1,5 @@
 <template>
-  <button class="btn" :style="{background: bgColor}">
+  <button :style="{background: bgColor}">
     Button
   </button>
 </template>
@@ -19,7 +19,7 @@ export default {
 <style scoped>
   .btn {
     padding: 1rem 1rem 1rem 1rem;
-    color: white;
+    color: green;
     font-size: 3rem;
     border: none;
     box-shadow: 10px 5px 5px grey;
