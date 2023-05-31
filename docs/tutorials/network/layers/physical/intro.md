@@ -42,13 +42,13 @@ Topologia Física ou Topologia de Rede é a Representação Geográfica dos Disp
 
 <br>
 
-1. Topologia de malha: em uma topologia de malha, todo e qualquer dispositivo deve ter uma conexão ponto a ponto dedicada com todos os outros dispositivos da rede. Aqui há mais segurança de dados porque há uma conexão ponto a ponto dedicada entre dois dispositivos. A topologia de malha é difícil de instalar porque é mais complexa.
+1. **Topologia de malha:** em uma topologia de malha, todo e qualquer dispositivo deve ter uma conexão ponto a ponto dedicada com todos os outros dispositivos da rede. Aqui há mais segurança de dados porque há uma conexão ponto a ponto dedicada entre dois dispositivos. A topologia de malha é difícil de instalar porque é mais complexa.
 
-2. Topologia em estrela: Na topologia em estrela, o dispositivo deve ter uma conexão ponto a ponto dedicada com um controlador central ou hub. A topologia em estrela é fácil de instalar e reconectar em comparação com a topologia em malha. A topologia em estrela não possui técnica de tolerância a falhas.
+2. **Topologia em estrela:** Na topologia em estrela, o dispositivo deve ter uma conexão ponto a ponto dedicada com um controlador central ou hub. A topologia em estrela é fácil de instalar e reconectar em comparação com a topologia em malha. A topologia em estrela não possui técnica de tolerância a falhas.
 
-3. Topologia de barramento: Em uma topologia de barramento, vários dispositivos são conectados por meio de um único cabo conhecido como cabo de backbone com a ajuda de linhas de derivação e queda. É menos dispendioso em comparação com a topologia de malha e a topologia de estrela. A reconexão e a reinstalação são difíceis.
+3. **Topologia de barramento:** Em uma topologia de barramento, vários dispositivos são conectados por meio de um único cabo conhecido como cabo de backbone com a ajuda de linhas de derivação e queda. É menos dispendioso em comparação com a topologia de malha e a topologia de estrela. A reconexão e a reinstalação são difíceis.
 
-4. Topologia em Anel: Em uma topologia em anel, cada dispositivo é conectado com repetidores em um anel circular, por isso é chamado de Topologia em Anel. Na topologia em anel, um dispositivo pode enviar os dados apenas quando tiver um token, sem um token nenhum dispositivo pode enviar os dados e um token é colocado pelo monitor na topologia em anel.
+4. **Topologia em Anel:** Em uma topologia em anel, cada dispositivo é conectado com repetidores em um anel circular, por isso é chamado de Topologia em Anel. Na topologia em anel, um dispositivo pode enviar os dados apenas quando tiver um `token`, sem um `token` nenhum dispositivo pode enviar os dados e um `token` é colocado pelo monitor na topologia em anel.
 
 <br>
 
@@ -59,6 +59,8 @@ Topologia Física ou Topologia de Rede é a Representação Geográfica dos Disp
 <br>
 
 ### Modos de Meio de Transmissão:
+
+<br>
 
  1. **Modo Simplex:** Neste modo, de dois dispositivos, apenas um dispositivo pode transmitir os dados, o outro dispositivo pode apenas receber os dados. Exemplo- entrada de teclados, monitores, transmissão de **TV**, transmissão de rádio, etc.
 

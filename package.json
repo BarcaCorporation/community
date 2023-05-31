@@ -3,8 +3,11 @@
   "version": "0.1.1",
   "description": "Repository to centralize content how scripts, tutorials and more.",
   "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "lint": "vue-cli-service lint"
   },
   "authors": [
     {
